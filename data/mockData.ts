@@ -1,0 +1,111 @@
+import { Visit, HealthcareProfessional } from "@/types";
+
+export const visits: Visit[] = [
+  {
+    id: 1,
+    date: "2024-04-23",
+    hcpId: 1,
+    productsDiscussed: ["Product A", "Product B"],
+    notes: "Discussed the latest clinical trial results for Product A.",
+    followUpDate: "2024-05-07",
+    outcome: "Positive reception, scheduled a follow-up to discuss implementation.",
+    status: "planned",
+  },
+  {
+    id: 2,
+    date: "2024-04-25",
+    hcpId: 2,
+    productsDiscussed: ["Product C"],
+    notes: "Introduced Product C and its benefits for elderly patients.",
+    followUpDate: "2024-05-10",
+    outcome: "Expressed interest, requested samples for evaluation.",
+    status: "completed",
+  },
+  {
+    id: 3,
+    date: "2024-04-27",
+    hcpId: 3,
+    productsDiscussed: ["Product A", "Product D"],
+    notes: "Discussed new applications of Product D in pediatric care.",
+    followUpDate: null,
+    outcome: "Agreed to recommend Product D to relevant patients.",
+    status: "canceled",
+  },
+  {
+    id: 4,
+    date: "2024-04-29",
+    hcpId: 4,
+    productsDiscussed: ["Product B", "Product C"],
+    notes: "Presented a comparative analysis of Product B and Product C.",
+    followUpDate: "2024-05-15",
+    outcome: "Impressed with the data, considering switching to Product B.",
+    status: "planned",
+  },
+  {
+    id: 5,
+    date: "2024-05-01",
+    hcpId: 5,
+    productsDiscussed: ["Product D"],
+    notes: "Addressed concerns about the side effects of Product D.",
+    followUpDate: null,
+    outcome: "Remained skeptical, further information required.",
+    status: "completed",
+  },
+];
+
+export const getHcpById = (id: number) => {
+  return hcps.find((hcp) => hcp.id === id);
+};
+
+export const hcps: HealthcareProfessional[] = [
+  {
+    id: 1,
+    name: "Dr. Sarah Johnson",
+    specialty: "Cardiologist",
+    organization: "Heart Care Center",
+    city: "San Francisco",
+    state: "CA",
+    rating: 5,
+    potentialValue: 50000,
+  },
+  {
+    id: 2,
+    name: "Dr. Michael Chen",
+    specialty: "Neurologist",
+    organization: "Brain & Spine Institute",
+    city: "Los Angeles",
+    state: "CA",
+    rating: 4,
+    potentialValue: 35000,
+  },
+  {
+    id: 3,
+    name: "Dr. Emily Rodriguez",
+    specialty: "Oncologist",
+    organization: "Cancer Treatment Center",
+    city: "San Diego",
+    state: "CA",
+    rating: 5,
+    potentialValue: 75000,
+  },
+  {
+    id: 4,
+    name: "Dr. James Wilson",
+    specialty: "Pediatrician",
+    organization: "Children's Hospital",
+    city: "Sacramento",
+    state: "CA",
+    rating: 3,
+    potentialValue: 25000,
+  },
+  {
+    id: 5,
+    name: "Dr. Lisa Park",
+    specialty: "Dermatologist",
+    organization: "Skin Care Clinic",
+    city: "Santa Barbara",
+    state: "CA",
+    rating: 4,
+    potentialValue: 40000,
+  },
+];
